@@ -1,9 +1,10 @@
 package com.perfulandia.msvc.usuario.repositories;
 
-import com.perfulandia.msvc.usuario.models.Usurio;
+import com.perfulandia.msvc.usuario.models.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usurio,Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
+    Usuario findByNombre(String nombre);
 }
