@@ -1,6 +1,7 @@
-package com.perfulandia.msvc.tienda.exceptions;
+package com.perfulandia.msvc.producto.exception;
 
-import com.perfulandia.msvc.tienda.DTO.ErrorDTO;
+
+import com.perfulandia.msvc.producto.DTO.ErrorDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -12,7 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GlobalError {
+public class productoGlobal {
     private ErrorDTO createErrorDTO(int status, Date date, Map<String , String> errorMap){
         ErrorDTO errorDTO= new ErrorDTO();
 
@@ -38,3 +39,4 @@ public class GlobalError {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(this.createErrorDTO(HttpStatus.NOT_FOUND.value(), new Date(),errorMap));
     }
 }
+

@@ -1,9 +1,10 @@
-package com.perfulandia.msvc.tienda.models;
+package com.perfulandia.msvc.producto.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.time.LocalDateTime;
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 @Entity
 public class Producto {

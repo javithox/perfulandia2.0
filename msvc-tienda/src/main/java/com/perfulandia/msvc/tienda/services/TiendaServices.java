@@ -1,13 +1,15 @@
 package com.perfulandia.msvc.tienda.services;
 
 import com.perfulandia.msvc.tienda.models.Producto;
+import com.perfulandia.msvc.tienda.models.entities.Tienda;
 
 import java.util.List;
 
 public interface TiendaServices {
 
-    List<Producto> findAll();
-    Producto findById(Long id);
-    Producto save(Producto producto);
-    Producto deleteById(Long id);
+    List<Tienda> findAll();
+    Tienda findByCantUsuario(int cantUsuarios);
+    Object findByProducto(String nombre);
+
+    Tienda findBynombre(String nombre);
 }

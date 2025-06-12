@@ -23,7 +23,7 @@ public class UsuarioController {
     public ResponseEntity<Optional<Usuario>> FindById(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).body(this.usuarioRepository.findById(id));
     }
-    @GetMapping
+    @GetMapping("/usuario/nombre")
     public ResponseEntity<Usuario> FindByName(@PathVariable String nombre){
         return ResponseEntity.status(HttpStatus.OK).body(this.usuarioRepository.findByNombre(nombre));
     }
@@ -32,7 +32,7 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(this.usuarioRepository.save(gestionUsuario));
 
     }
-    @GetMapping
+    @GetMapping("/usuarios")
     public ResponseEntity<List<Usuario>>findAll(){
         return ResponseEntity .status(HttpStatus.OK).body(this.usuarioRepository.findAll());
     }
